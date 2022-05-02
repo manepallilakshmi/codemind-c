@@ -8,6 +8,7 @@ int main()
         if(n%i==0)
         {
             fact=fact+1;
+            
         }
         i++;
     }

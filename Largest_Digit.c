@@ -10,7 +10,7 @@ int main()
         {  
             lar = rem;
         }
-    n = n/10;
+    n = n /10;
     }
  printf("%d",lar);
    return 0;

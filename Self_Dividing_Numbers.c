@@ -1,48 +1,28 @@
 #include<stdio.h>
-int self_div(int n)
-{
-    int c=0;
-    int temp=n,r;
-    while(temp>0)
-    {
-        r=temp%10;
-        if(r==0)
-        {
-            c=0;
-            break;
-        }
-        else
-        {
-            if(n%r==0)
-            {
-                c=1;
-            }
-            else
-            {
-                c=0;
-                break;
-            }
-        }
-        temp=temp/10;
-    }
-    if(c==1)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
 int main()
 {
-    int a,b;
+    int a,b,i,temp,r;
     scanf("%d%d",&a,&b);
-    for(a;a<=b;a++)
+    for(i=a;i<=b;i++)
     {
-        if(self_div(a)==1)
+        int count1=0,count2=0;
+        temp=i;
+        while(temp)
         {
-            printf("%d ",a);
+            r=temp%10;
+            count1++;
+            if(r>0)
+            {
+                if(i%r==0)
+                {
+                    count2++;
+                }
+            }
+            temp=temp/10;
+        }
+        if(count1==count2)
+        {
+            printf("%d ",i);
         }
     }
 }

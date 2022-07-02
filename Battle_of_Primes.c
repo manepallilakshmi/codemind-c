@@ -8,11 +8,11 @@ int main()
     for(i=1;i<=1000;i++)
     {
        s=s+1;
-       for(j=1;j<=s;j++)    //
+       for(j=1;j<=s;j++)    
        {
-           if(s%j==0)        //11%==0
+           if(s%j==0)        
            {
-               count++;       //1
+               count++;       
            }
        }
        if(count==2)
